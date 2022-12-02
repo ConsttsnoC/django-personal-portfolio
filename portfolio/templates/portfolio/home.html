@@ -1,0 +1,44 @@
+{% extends 'portfolio/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="row justify-content-center my-5">
+    <div class="col-4">
+        <div class="card">
+            <img src="{% static 'portfolio/3.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <div class="container px-2 text-center">
+                    <h5 class="card-title">Константин Гильманов</h5>
+                    <p class="card-text">Python-разработчик</p>
+                </div>
+                <hr>
+                <div class="container px-2 text-center">
+                    <a href="{% url 'blog:all_blogs' %}" class="btn btn-secondary">Мой Блог</a>
+                    <a href="{% static 'portfolio/2.pdf' %}" class="btn btn-secondary">Резюме</a>
+                    <a href="https://github.com/ConsttsnoC?tab=repositories" class="btn btn-secondary" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr class="border border-black border-2 opacity-50">
+
+<div class="row justify-content-md-center">
+    {% for project in projects %}
+    <div class="col-sm">
+        {% if project.url %}
+        <a href="{{ project.url }}">
+            <img src="{{ project.image.url }}" class="card-img-top">
+        </a>
+        {% else %}
+        <img src="{{ project.image.url }}" class="card-img-top">
+        {% endif %}
+        <div class="text-center">
+            <p>{{ project.title }}</p>
+            <p>{{ project.description }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
