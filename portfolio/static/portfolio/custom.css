@@ -8,10 +8,17 @@
 
 body {
     font-family: 'Lato', sans-serif;
+    background: #f8f9fa;
 }
 
 #blogtitle {
     font-size: 6rem;
+}
+
+.portfolio-avatar {
+    border-radius: 50%;
+    width: 60%;
+    align-self: center;
 }
 
 @media (min-width: 992px) {

@@ -3,10 +3,10 @@
 {% load static %}
 
 {% block content %}
-<div class="row justify-content-center my-5">
-    <div class="col-4">
-        <div class="card">
-            <img src="{% static 'portfolio/3.jpg' %}" class="card-img-top" alt="...">
+<div class="row justify-content-start my-5">
+    <div class="col-12 col-sm-8 col-md-6">
+        <div class="card bg-transparent border-0">
+            <img src="{% static 'portfolio/3.jpg' %}" class="portfolio-avatar" alt="...">
             <div class="card-body">
                 <div class="container px-2 text-center">
                     <h5 class="card-title">Константин Гильманов</h5>
@@ -14,9 +14,9 @@
                 </div>
                 <hr>
                 <div class="container px-2 text-center">
-                    <a href="{% url 'blog:all_blogs' %}" class="btn btn-secondary">Мой Блог</a>
-                    <a href="{% static 'portfolio/2.pdf' %}" class="btn btn-secondary">Резюме</a>
-                    <a href="https://github.com/ConsttsnoC?tab=repositories" class="btn btn-secondary" target="_blank">GitHub</a>
+                    <a href="{% url 'blog:all_blogs' %}" class="btn btn-secondary m-2">Мой Блог</a>
+                    <a href="{% static 'portfolio/2.pdf' %}" class="btn btn-secondary m-2">Резюме</a>
+                    <a href="https://github.com/ConsttsnoC?tab=repositories" class="btn btn-secondary m-2" target="_blank">GitHub</a>
                 </div>
             </div>
         </div>
