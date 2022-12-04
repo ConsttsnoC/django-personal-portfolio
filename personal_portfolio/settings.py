@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-6+ignv2-nzx_)(@jb+(k@5*qrmph-qg-qsi$a+c7o0%x4i#49q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['consttsnos.pythonanywhere.com']
 
 
 # Application definition
@@ -119,6 +119,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 #задает адрес откуда будут прикрепляться файлы
+STATIC_ROOT = BASE_DIR / 'static'
 MEDI_URL = '/media/'
 #место сохранения медиа файлов из админки
 MEDIA_ROOT = BASE_DIR / 'media'
