@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-6+ignv2-nzx_)(@jb+(k@5*qrmph-qg-qsi$a+c7o0%x4i#49q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['consttsnos.pythonanywhere.com']
+ALLOWED_HOSTS = ['https://consttsnos.pythonanywhere.com/']
 
 
 # Application definition
@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
-    'portfolio'
+    'portfolio',
+    'parol',
 ]
 
 MIDDLEWARE = [
@@ -128,3 +129,10 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+try:
+    from .locl_settings import *
+except ImportError:
+    print("Looks like no locl file. You must be on production")
+
+

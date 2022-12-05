@@ -22,10 +22,12 @@ from django.conf import settings
 from portfolio import views
 
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home, name='home'),
     path('blog/', include('blog.urls')),
+    path('parol/', include('parol.urls')),
 ]
-#
+
 urlpatterns += static(settings.MEDIA_URL,document_root= settings.MEDIA_ROOT)
