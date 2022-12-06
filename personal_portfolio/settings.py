@@ -121,7 +121,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 #задает адрес откуда будут прикрепляться файлы
 STATIC_ROOT = BASE_DIR / 'static'
-MEDI_URL = '/media/'
+MEDIA_URL = '/media/'
 #место сохранения медиа файлов из админки
 MEDIA_ROOT = BASE_DIR / 'media'
 
