@@ -23,9 +23,9 @@
     </div>
 </div>
 
-<div class="row justify-content-center">
+<div class="row justify-content-md-center">
     {% for project in projects %}
-        <div class="kart2">
+    <div class="col-sm">
         {% if project.url %}
         <a href="{{ project.url }}">
             <img src="{{ project.image.url }}" class="card-img-top">
