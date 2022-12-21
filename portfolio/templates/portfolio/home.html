@@ -15,7 +15,7 @@
                 <hr>
                 <div class="container px-2 text-center">
                     <a href="{% url 'blog:all_blogs' %}" class="btn btn-secondary m-2">Портфолио</a>
-                    <a href="{% static 'portfolio/res.pdf' %}" class="btn btn-secondary m-2">Резюме</a>
+                    <a href="{% static 'portfolio/res.ko.pdf' %}" class="btn btn-secondary m-2">Резюме</a>
                     <a href="https://github.com/ConsttsnoC?tab=repositories" class="btn btn-secondary m-2" target="_blank">GitHub</a>
                 </div>
             </div>
@@ -23,9 +23,9 @@
     </div>
 </div>
 
-<div class="row justify-content-md-center">
+<div class="row justify-content-center">
     {% for project in projects %}
-    <div class="col-sm">
+        <div class="kart2">
         {% if project.url %}
         <a href="{{ project.url }}">
             <img src="{{ project.image.url }}" class="card-img-top">
