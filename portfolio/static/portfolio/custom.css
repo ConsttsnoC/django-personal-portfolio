@@ -29,3 +29,15 @@ body {
         font-size: 5rem;
     }
 }
+
+.photo {
+    max-width: 50%;
+}
+
+.center {
+    text-align: center
+}
+
+pre {
+    font-family : Courier New, monospace;
+}

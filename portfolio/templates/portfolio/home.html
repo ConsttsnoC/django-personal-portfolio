@@ -14,15 +14,14 @@
                 </div>
                 <hr>
                 <div class="container px-2 text-center">
-                    <a href="{% url 'blog:all_blogs' %}" class="btn btn-secondary m-2">Мой Блог</a>
-                    <a href="{% static 'portfolio/resume.pdf' %}" class="btn btn-secondary m-2">Резюме</a>
+                    <a href="{% url 'blog:all_blogs' %}" class="btn btn-secondary m-2">Портфолио</a>
+                    <a href="{% static 'portfolio/res.pdf' %}" class="btn btn-secondary m-2">Резюме</a>
                     <a href="https://github.com/ConsttsnoC?tab=repositories" class="btn btn-secondary m-2" target="_blank">GitHub</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<hr class="border border-black border-2 opacity-50">
 
 <div class="row justify-content-md-center">
     {% for project in projects %}

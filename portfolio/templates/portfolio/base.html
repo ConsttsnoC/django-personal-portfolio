@@ -14,7 +14,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 
-    <link rel="icon" type="image/png" href="{% static 'portfolio/Portfolio.png' %}">
+    <link rel="icon" type="image/png" href="{% static 'portfolio/icons.png' %}">
 
     <title>Портофолио К.Г.</title>
 </head>
@@ -24,7 +24,7 @@
 <nav id="topNav" class="navbar navbar-expand-md navbar-light">
     <div class="container-fluid">
         <a class="navbar-brand">
-        <img src="{% static 'portfolio/Portfolio.png' %}" width="30" height="30" class="d-inline-block align-text-top" alt="Logo">
+        <img src="{% static 'portfolio/icons.png' %}" width="30" height="30" class="d-inline-block align-text-top" alt="Logo">
          Константин Гильманов
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,19 +33,19 @@
         <div class="collapse navbar-collapse text-center" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Портфолио</a>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/ConsttsnoC?tab=repositories" target="_blank">GitHub</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Главная</a>
                  <li class="nav-item">
-                    <a class="nav-link" href="{% static 'portfolio/resume.pdf' %}">Резюме</a>
+                    <a class="nav-link" href="{% static 'portfolio/res.pdf' %}">Резюме</a>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{% url 'blog:all_blogs' %}">Блог</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'blog:all_blogs' %}">Портфолио</a>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/ConsttsnoC?tab=repositories" target="_blank"><img src="https://img.icons8.com/ios-glyphs/30/null/github.png"/></a>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://instagram.com/constantsamara?igshid=MWM2YjBjM2Q=" target="_blank">Instagram</a>
+                    <a class="nav-link" href="https://instagram.com/constantsamara?igshid=MWM2YjBjM2Q=" target="_blank"><img src="https://img.icons8.com/ios-glyphs/30/null/instagram-new.png"/></a>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://vk.com/constantaa" target="_blank">Vk</a>
+                    <a class="nav-link" href="https://vk.com/constantaa" target="_blank"><img src="https://img.icons8.com/ios-glyphs/30/null/vk-circled.png"/></a>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://t.me/constantasmr" target="_blank">Telegram</a>
+                    <a class="nav-link" href="https://t.me/constantasmr" target="_blank"><img src="https://img.icons8.com/ios-glyphs/30/null/filled-sent.png"/></a>
                 <li class="nav-item">
                 </li>
             </ul>
