@@ -40,6 +40,9 @@ body {
 
 pre {
     font-family : Courier New, monospace;
+    font-size: calc(4px + 1vw);
+   }
+
+.h3blog{
+  font-size: calc(1rem + 1vw);
 }
-
-
