@@ -3,42 +3,45 @@
 {% load static %}
 
 {% block content %}
+<head>
+  <meta charset="UTF-8">
+</head>
 <div class="row justify-content-center my-5">
-    <div class="col-12 col-sm-8 col-md-6">
-        <div class="card bg-transparent border-0">
-            <img src="{% static 'portfolio/3.jpg' %}" class="portfolio-avatar" alt="...">
-            <div class="card-body">
-                <div class="container px-2 text-center">
-                    <h5 class="card-title">Константин Гильманов</h5>
-                    <p class="card-text">Python-разработчик</p>
-                </div>
-                <hr>
-                <div class="container px-2 text-center">
-                    <a href="{% url 'blog:all_blogs' %}" class="btn btn-secondary m-2">Портфолио</a>
-                    <a href="{% static 'portfolio/res.ko.pdf' %}" class="btn btn-secondary m-2">Резюме</a>
-                    <a href="https://github.com/ConsttsnoC?tab=repositories" class="btn btn-secondary m-2" target="_blank">GitHub</a>
-                </div>
-            </div>
+  <div class="col-12 col-sm-8 col-md-6">
+    <div class="card bg-transparent border-0">
+      <img src="{% static 'portfolio/3.jpg' %}" class="portfolio-avatar" alt="...">
+      <div class="card-body">
+        <div class="container px-2 text-center">
+          <h5 class="card-title">Константин Гильманов</h5>
+          <p class="card-text">Python-разработчик</p>
         </div>
+        <hr>
+        <div class="container px-2 text-center">
+          <a href="{% url 'blog:all_blogs' %}" class="btn btn-secondary m-2">Портфолио</a>
+          <a href="{% static 'portfolio/gilmanov.pdf' %}" class="btn btn-secondary m-2">Резюме</a>
+          <a href="https://github.com/ConsttsnoC?tab=repositories" class="btn btn-secondary m-2" target="_blank">GitHub</a>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
 
 <div class="row justify-content-md-center">
-    {% for project in projects %}
-    <div class="col-sm">
-        {% if project.url %}
-        <a href="{{ project.url }}">
-            <img src="{{ project.image.url }}" class="card-img-top">
-        </a>
-        {% else %}
-        <img src="{{ project.image.url }}" class="card-img-top">
-        {% endif %}
-        <div class="text-center">
-            <p>{{ project.title }}</p>
-            <p>{{ project.description }}</p>
-        </div>
+  {% for project in projects %}
+  <div class="col-sm">
+    {% if project.url %}
+    <a href="{{ project.url }}">
+      <img src="{{ project.image.url }}" class="card-img-top">
+    </a>
+    {% else %}
+    <img src="{{ project.image.url }}" class="card-img-top">
+    {% endif %}
+    <div class="text-center">
+      <p>{{ project.title }}</p>
+      <p>{{ project.description }}</p>
     </div>
-    {% endfor %}
+  </div>
+  {% endfor %}
 </div>
 {% endblock %}
 

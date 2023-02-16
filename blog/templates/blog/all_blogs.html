@@ -1,21 +1,64 @@
 {% extends 'portfolio/base.html' %}
 
 {% block content %}
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+      .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        direction: rtl;
+      }
 
-{% for blog in blogs %}
-<div class="card">
-    <div class="center" class="card-header">
-        <pre><h3 class="h3blog">{{ blog.title }}</h3></pre>
-         <a href="{{ blog.url }}">
-        <img class="photo" src="{{ blog.images.url }}">
-         </a>
-        <div>
-            <pre class="card-text">{{ blog.descriptoin|striptags|truncatechars:500 }}</pre>
+      .card {
+        width: 30%;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        margin: 10px;
+      }
+
+      @media (max-width: 992px) {
+        .card {
+          width: 45%;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .card {
+          width: 100%;
+        }
+        .card-body {
+          margin-top: 10px;
+        }
+      }
+
+      .card-container {
+        margin-top: 10%;
+      }
+
+    </style>
+ </head>
+  <body>
+    <div class="card-container">
+      {% for blog in blogs %}
+        <div class="card">
+          <img src="{{ blog.images.url }}" class="card-img-top" alt="{{ blog.title }}" style="height: auto;">
+          <div class="card-body">
+            <h5 class="card-title">{{ blog.title }}</h5>
+            <a href="{{ blog.url }}" class="btn btn-secondary" style="margin-top: 10px;">Посмотреть сайт</a>
+            <a href="{{ blog.github_repo }}" class="btn btn-secondary" style="margin-top: 10px;">Посмотреть код</a>
+          </div>
         </div>
+      {% endfor %}
     </div>
-</div>
-
-
-{% endfor %}
-
+  </body>
+</html>
 {% endblock %}
