@@ -28,19 +28,22 @@
 
 <div class="row justify-content-md-center">
   {% for project in projects %}
-  <div class="col-sm">
-    {% if project.url %}
-    <a href="{{ project.url }}">
-      <img src="{{ project.image.url }}" class="card-img-top">
-    </a>
-    {% else %}
-    <img src="{{ project.image.url }}" class="card-img-top">
-    {% endif %}
-    <div class="text-center">
-      <p>{{ project.title }}</p>
-      <p>{{ project.description }}</p>
+    <div class="col-sm-4">
+      {% if project.url %}
+        <a href="{{ project.url }}">
+          <img src="{{ project.image.url }}" class="card-img-top">
+        </a>
+      {% else %}
+        <img src="{{ project.image.url }}" class="card-img-top">
+      {% endif %}
+      <div class="text-center">
+        <p>{{ project.title }}</p>
+        <p>{{ project.description }}</p>
+      </div>
     </div>
-  </div>
+    {% if forloop.counter|divisibleby:3 %}
+      </div><div class="row justify-content-md-center">
+    {% endif %}
   {% endfor %}
 </div>
 {% endblock %}
